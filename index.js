@@ -8,6 +8,28 @@ const productImage = document.getElementById("productImage")
 const productFrames = document.getElementsByClassName("product-image_frame")[0]
 const productLenses = document.getElementsByClassName("product-image_lenses")[0]
 
+// Added Modal Code
+const openModalBtn = document.getElementById('openModalBtn');
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementsByClassName('close')[0];
+
+// Open modal
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+  
+  // Close modal
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
+
 // Updated from var to let
 let sunglassesNew = ''
 
